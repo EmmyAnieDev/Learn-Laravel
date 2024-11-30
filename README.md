@@ -40,3 +40,15 @@
 -   php artisan make:view Home: To create a Home.blade.php file in the Views folder.
 
 -   php artisan make:controller HomeController: To create a HomeController.php file in our app/http/controller folder.
+
+## LARAVEL ARTISAN TINKER
+
+-   php artisan tinker: We use this command to communicate with our Application from the terminal, testing, debugging, and interacting with your application's data and features
+
+*   We can perform CRUD to our database with dummy file using the "tinker".
+
+*   App\Models\User::count(); ====>> get the total number of rows in the user table in our database.
+
+*   App\Models\User::factory(10)->create(); ====>> This is used to insert fake data into the database using a factory in Laravel.
+
+*   We can even use PHP function in out tinker.
