@@ -30,3 +30,13 @@
 *   USER ----> CONTROLLER -----> MODEL -----> CONNTROLLER -----> VIEWS -----> USER.
 
 -   User request goes to the Routes file which goes to the Controller, then the Controller request infromation from the Model which returns the information to the Controller then it sends to the View which send a response to the User.
+
+## LARAVEL ARTISAN and CONSOLE
+
+-   php artisan: This shows the list of all Artisan command.
+
+-   php artisa about: This shows the version of our app.
+
+-   php artisan make:view Home: To create a Home.blade.php file in the Views folder.
+
+-   php artisan make:controller HomeController: To create a HomeController.php file in our app/http/controller folder.
