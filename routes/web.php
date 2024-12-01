@@ -18,3 +18,21 @@ Route::get('/user/{id}', function ($id) {
     return "This is the profile for user id - $id";
 
 });
+
+// Route grouping with named route.
+Route::group(['prefix' => 'blog', 'as' => 'blog.'], function() {
+
+    Route::get('/create', function () {
+        return "Blog Create Page";
+    })->name('create');
+
+    Route::get('/edit', function () {
+        return "Blog Edit Page";
+    })->name('edit');
+
+    Route::get('/show', function () {
+        return "Blog Show Page";
+    })->name('show');
+
+});
+
