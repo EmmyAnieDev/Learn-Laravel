@@ -62,3 +62,7 @@
 -   Route parameter is the parameter that you pass in the URL.
 
 -   A fallback route in Laravel is used to handle requests that do not match any of the defined routes in your application.
+
+## BLADE
+
+-   In Laravel Blade, a stack is a way to define sections of content that can be pushed or appended to from child views or included partials and then rendered in the parent view.
