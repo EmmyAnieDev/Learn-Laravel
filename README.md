@@ -60,3 +60,5 @@
 -   When a REQUEST is sent to a web server, the ROUTES checks if there is a matching URL pattern. If a match is found, the corresponding action or code (also known as the route handler) is executed.
 
 -   Route parameter is the parameter that you pass in the URL.
+
+-   A fallback route in Laravel is used to handle requests that do not match any of the defined routes in your application.

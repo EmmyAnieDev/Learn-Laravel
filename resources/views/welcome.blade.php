@@ -8,6 +8,5 @@
 </head>
 <body>
     <h1>I am Home</h1>
-    <a href="{{ route('about') }}">About Page</a>
 </body>
 </html>
