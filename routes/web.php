@@ -7,20 +7,14 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
+
     return 'This is the About page';
-});
 
-// Passing data to the view
-Route::get('/home', function () {
-
-    $names = ['person_1' => 'John', 'person_2' => 'Dan', 'person_3' => 'Tom'];
-
-    return view('home', $names);
-});
+})->name('about');
 
 // Adding a paramter (id) to the URL 
 Route::get('/user/{id}', function ($id) {
 
-    return "This is the account for user id - $id";
+    return "This is the profile for user id - $id";
 
-});
+})->name('user');
