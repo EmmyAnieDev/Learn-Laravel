@@ -72,3 +72,7 @@
 -   This type of controller contains only one type of actions/methods.
 
 -   Creating a single action controller ====>> php artisan make:controller SingleActionController --invokable.
+
+-   Resource controller: This is a type of controller that provides a set of actions or for handling common Crud operations like create, read, update, delete, etc.
+
+-   How to create a Resource Controller ====>> php artisan make:controller BlogController -r ('-r' flag meaning resource).
