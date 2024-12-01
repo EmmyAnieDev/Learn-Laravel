@@ -52,3 +52,9 @@
 *   App\Models\User::factory(10)->create(); ====>> This is used to insert fake data into the database using a factory in Laravel.
 
 *   We can even use PHP function in out tinker.
+
+## ROUTES
+
+-   Route act as a mapping between a specific URL and the corresponding code that should be executed.
+
+-   When a REQUEST is sent to a web server, the ROUTES checks if there is a matching URL pattern. If a match is found, the corresponding action or code (also known as the route handler) is executed.
