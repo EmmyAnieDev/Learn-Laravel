@@ -66,3 +66,9 @@
 ## BLADE
 
 -   In Laravel Blade, a stack is a way to define sections of content that can be pushed or appended to from child views or included partials and then rendered in the parent view.
+
+## CONTROLLER
+
+-   This type of controller contains only one type of actions/methods.
+
+-   Creating a single action controller ====>> php artisan make:controller SingleActionController --invokable.
