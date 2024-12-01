@@ -17,4 +17,4 @@ Route::get('/user/{id}', function ($id) {
 
     return "This is the profile for user id - $id";
 
-})->name('user');
+});
