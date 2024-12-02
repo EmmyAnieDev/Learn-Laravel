@@ -107,4 +107,18 @@
 
 -   Before running the new created seeder call the seeder in the the DatabaseSeeder file ====>> $this->call(UserSeeder::class);
 
--   to run the seeder ====>> php artisan db:seed
+-   to run the seeder ====>> php artisan db:seed .
+
+## FACTORIES
+
+-   Factories in Laravel help you create fake data for testing.
+
+-   To create a factory for a particular model ====>> php artisan make:factory BlogFactory.
+
+-   Unlike Seeders where we hardcode the contents, Factories generate dynamic/ dummy contents.
+
+-   To create the dummy data ====>> App\Models\Blog::factory(5)->create();
+
+-   Before running the new created factory add the feeder in the the DatabaseSeeder file ====>> Blog::factory(10)->create();
+
+-   to run the factory ====>> php artisan db:seed .
