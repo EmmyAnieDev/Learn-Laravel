@@ -76,3 +76,13 @@
 -   Resource controller: This is a type of controller that provides a set of actions or for handling common Crud operations like create, read, update, delete, etc.
 
 -   How to create a Resource Controller ====>> php artisan make:controller BlogController -r ('-r' flag meaning resource).
+
+## MIGRATIONS
+
+-   Migration is a version control for database schema for Laravel.
+
+-   You can create table database table. You can define columns columns type. You can establish indexing foreign keys.
+
+-   To create a table ====>> php artisan make:migration create_blogs_table . table name must be plural to follow laravel naming convention.
+
+-   To add the new table created to the database ====>> php artisan migrate.
