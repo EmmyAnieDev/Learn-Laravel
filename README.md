@@ -86,3 +86,11 @@
 -   To create a table ====>> php artisan make:migration create_blogs_table . table name must be plural to follow laravel naming convention.
 
 -   To add the new table created to the database ====>> php artisan migrate.
+
+## MODEL
+
+-   A model is a presentation of a table in your database.
+
+-   Models are used to interact with the database and encapsulate the logic related to the data manipulation. Each model corresponds to a data table.
+
+-   To create a model ====>> php artisan make:model Blog . model name must be singular to follow laravel naming convention.
