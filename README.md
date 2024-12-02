@@ -122,3 +122,9 @@
 -   Before running the new created factory add the feeder in the the DatabaseSeeder file ====>> Blog::factory(10)->create();
 
 -   to run the factory ====>> php artisan db:seed .
+
+## ADD TABLE TO EXISTING TABLE
+
+-   To add a column to an exisitng table ====>> php artisan make:migration add_author_to_blogs_table .
+
+-   Define the column properties then ====>> php artisan migrate .
