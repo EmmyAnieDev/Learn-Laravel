@@ -94,3 +94,5 @@
 -   Models are used to interact with the database and encapsulate the logic related to the data manipulation. Each model corresponds to a data table.
 
 -   To create a model ====>> php artisan make:model Blog . model name must be singular to follow laravel naming convention.
+
+-   When creating a model with a custom name, for example, MyBlog instead of Blog, we must define the name of the corresponding table in the model using the following property ====>> protected $table = 'blogs'.
