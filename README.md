@@ -96,3 +96,15 @@
 -   To create a model ====>> php artisan make:model Blog . model name must be singular to follow laravel naming convention.
 
 -   When creating a model with a custom name, for example, MyBlog instead of Blog, we must define the name of the corresponding table in the model using the following property ====>> protected $table = 'blogs'.
+
+## SEEDERS
+
+-   Seeders are basically used to seed data into the database.
+
+-   In Laravel, seeders are used to put sample or initial data into your database, so you don't have to do it by hand.
+
+-   To create a user seeder ====>> php artisan make:seeder UserSeeder
+
+-   Before running the new created seeder call the seeder in the the DatabaseSeeder file ====>> $this->call(UserSeeder::class);
+
+-   to run the seeder ====>> php artisan db:seed

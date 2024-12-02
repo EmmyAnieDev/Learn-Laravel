@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\MyBlog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Bus;
 
@@ -14,7 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = MyBlog::all();
+        $blogs = Blog::all();
 
         error_log(count($blogs));
 
@@ -48,7 +47,7 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        $blog = MyBlog::findOrFail($id);
+        $blog = Blog::findOrFail($id);
         
         return "$blog->title - $blog->description";
     }
