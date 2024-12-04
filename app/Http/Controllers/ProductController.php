@@ -11,21 +11,14 @@ class ProductController extends Controller
 
     function index() {
 
-        $product = Product::where('price', 87.81)->first();
-        $product = Product::where('name', 'LIKE', '%repudiandae%')->get();   // PERFOM A SEARCH
+        Product::find(54)->delete(); 
 
-        // If searching by name fails, the system will search by description
-        $product = Product::where('name', 'LIKE', '%repudiandae%')->orWhere('description', 'LIKE', '%sit%')->get();
+        // Retrieve all products, including those that have been soft deleted (trashed)
+        $product = Product::withTrashed()->get();
 
-        // Searching with name and description. Both conditions must be true
-        $product = Product::where('name', 'LIKE', '%repudiandae%')->where('description', 'LIKE', '%sit%')->get();
+        $product = Product::withTrashed()->find(43);    // Retrieve just the trashed data.
 
-        // Retrieve all products with IDs 32, 43, 51, 55, and 60
-        $product = Product::whereIn('id', [32, 43, 51, 55, 60])->get();
-
-        // Retrieve all products between the price range of 400 and 500
-        $product = Product::whereBetween('price', [400.0, 500.0])->get();
-
+        $product = Product::onlyTrashed()->get();   // Retreive all trashed data
 
         dd($product);
         
