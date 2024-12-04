@@ -154,3 +154,9 @@
 -   Mass assignment allows setting multiple attributes on a model at once using an array of key-value pairs.
 
 -   Guarded property specifies which attributes that can't be mass-assigned.
+
+## CONDITION CLAUSE
+
+-   LIKE: Used to search for a value within a column, often with wildcard characters (% or \_).
+
+-   WHERE: Used to filter records based on a specified condition.
