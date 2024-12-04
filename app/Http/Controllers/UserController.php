@@ -10,15 +10,16 @@ class UserController extends Controller
    
     public function index()
     {
-        // Update data in DB
+        // Delete data in DB
 
         $user = User::where('id', 9)->first();  // Retrieve the first user with the specified ID
-        $user = User::find(9);  // Find method only works with ID
+        $user = User::findorfail(9);  // Find method only works with ID
 
-        $user->name = 'Gabriella Frank';     // Update the user's name
-        $user->email = 'gabi@gmail.com';
+        if (! isset($user)) {
+            echo 'no user found!';
+        }
 
-        $user->save();
+        $user->delete();
 
         dd($user);
 
