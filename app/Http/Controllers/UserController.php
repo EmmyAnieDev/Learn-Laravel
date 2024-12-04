@@ -10,15 +10,17 @@ class UserController extends Controller
    
     public function index()
     {
-        // Read data in DB
+        // Update data in DB
 
-        # Get all users.
-        $users = User::all(); // or User::get();
+        $user = User::where('id', 9)->first();  // Retrieve the first user with the specified ID
+        $user = User::find(9);  // Find method only works with ID
 
-        # Get a specific user.
-        $user = User::where('id', 8)->first();  // or User::find('8')
-        
-        dd ($user);
+        $user->name = 'Gabriella Frank';     // Update the user's name
+        $user->email = 'gabi@gmail.com';
+
+        $user->save();
+
+        dd($user);
 
     }
 }
