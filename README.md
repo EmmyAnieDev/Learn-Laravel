@@ -136,3 +136,5 @@
 -   Query Builder is really handy because it is more faster than eloquent when we have much data in our database.
 
 -   First we have to import the "DB Facades" class before we can use the Query Builder. =====>> use Illuminate\Support\Facades\DB or ===> use DB .
+
+-   When we want to select all items in a particular column we use the (pluck method), passing two parrams. first the column to fetch, second the key example in our case the id.

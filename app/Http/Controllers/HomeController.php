@@ -12,8 +12,10 @@ class HomeController extends Controller
 
         // Query Builder works directly with Table, so we have to mention the table we want to query.
 
-        DB::table('users')->where('id', 6)->delete();
-        DB::table('users')->where('id', '>', 3)->delete();  // delete if id is greater than 3
+        $blogsTitle = DB::table('blogs')->select('title')->get();   // get as an object whe using the dd()
+        $blogsTitle = DB::table('blogs')->pluck('title');
+        $blogsTitle = DB::table('blogs')->pluck('title' , 'id');    // pluck with the id
+        dd ($blogsTitle);
 
         return view('welcome');
     }
