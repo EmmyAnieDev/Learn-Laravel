@@ -9,5 +9,10 @@ class Blog extends Model
 {
     use HasFactory;
     
-    //
+    // Naming convention: Prefix the function name with "scope" to define a query scope
+    function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
 }

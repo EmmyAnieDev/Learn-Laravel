@@ -13,17 +13,10 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        // Get all blogs with a status of 1 using the 'Active' query scope
+        $blogs = Blog::Active()->get();
 
-        error_log(count($blogs));
-
-        $blogData = [];
-
-        foreach($blogs as $blog){
-            $blogData[] = "$blog->title - $blog->description<br>";
-        }
-
-        return $blogData;
+        dd($blogs);
     }
 
     /**
@@ -47,9 +40,7 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        $blog = Blog::findOrFail($id);
-        
-        return "$blog->title - $blog->description";
+        //
     }
 
     /**
