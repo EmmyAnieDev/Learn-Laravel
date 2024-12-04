@@ -146,3 +146,11 @@
 *   Aggregates methods are mostly used for time calculating. Suppose you have to calculate the sum of your price column.
 
 *   You can also count how many columns you have. How many rows you have in the database.
+
+## FILLABLE & MASS ASSIGNMENT
+
+-   The Fillable property specifies which attributes can be mass-assigned.
+
+-   Mass assignment allows setting multiple attributes on a model at once using an array of key-value pairs.
+
+-   Guarded property specifies which attributes that can't be mass-assigned.
