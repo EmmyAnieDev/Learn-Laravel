@@ -138,3 +138,11 @@
 -   First we have to import the "DB Facades" class before we can use the Query Builder. =====>> use Illuminate\Support\Facades\DB or ===> use DB .
 
 -   When we want to select all items in a particular column we use the (pluck method), passing two parrams. first the column to fetch, second the key example in our case the id.
+
+## AGGREGATE METHODS
+
+-   Aggregate functions perform calculations on a set of values and return a single summary value. In the context of databases, they are typically used for summarizing data.
+
+*   Aggregates methods are mostly used for time calculating. Suppose you have to calculate the sum of your price column.
+
+*   You can also count how many columns you have. How many rows you have in the database.
