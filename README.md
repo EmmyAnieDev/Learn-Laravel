@@ -128,3 +128,11 @@
 -   To add a column to an exisitng table ====>> php artisan make:migration add_author_to_blogs_table .
 
 -   Define the column properties then ====>> php artisan migrate .
+
+## QUERY BUILDER
+
+-   Query Builder directly work with the Dataabse table. Eloquent works with the models.
+
+-   Query Builder is really handy because it is more faster than eloquent when we have much data in our database.
+
+-   First we have to import the "DB Facades" class before we can use the Query Builder. =====>> use Illuminate\Support\Facades\DB or ===> use DB .
