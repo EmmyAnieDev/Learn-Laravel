@@ -10,16 +10,15 @@ class UserController extends Controller
    
     public function index()
     {
-        // Create data in DB
+        // Read data in DB
 
-        // creating an instance of the User model class to access all attribute of database table users.
-        $user = new User;
+        # Get all users.
+        $users = User::all(); // or User::get();
 
-        $user->name = 'Anna Davies';
-        $user->email = 'anna@gmail.com';
-        $user->password = '123456';
-
-        $user->save();
+        # Get a specific user.
+        $user = User::where('id', 8)->first();  // or User::find('8')
+        
+        dd ($user);
 
     }
 }
