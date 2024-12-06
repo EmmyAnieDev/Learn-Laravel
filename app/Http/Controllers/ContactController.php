@@ -13,7 +13,7 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    function contactSubmit(contactStoreRequest $request)  // Using Dependency Injection to access the data in the request
+    function contactSubmit(ContactStoreRequest $request)  // Using Dependency Injection to access the data in the request
     {       
         $contact = new Contact();
 
