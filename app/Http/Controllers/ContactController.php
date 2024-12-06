@@ -11,8 +11,11 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    function contactSubmit()
+    function contactSubmit(Request $request)  // Using Dependency Injection to access the data in the request
     {
-        return 'contact';
+        $name = $request->name;
+        $email = $request->email;
+
+        echo "$name -- $email";
     }
 }

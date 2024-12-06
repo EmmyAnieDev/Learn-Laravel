@@ -168,3 +168,5 @@
 -   Whenever you need to make a request such as POST, PUT, PATCH, or DELETE in Laravel, you must generate and include a CSRF token with your request. Laravel validates this token by comparing the token provided in the request (e.g., through a form or header) with the token it has stored in the session on your browser. If both tokens match, Laravel considers the request valid and processes it.
 
 -   CSRF: This is for protection against malicious attacks.
+
+-   When a form is submitted, Laravel by default automatically inject all of the data in the HTTP request.
