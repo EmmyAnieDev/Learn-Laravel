@@ -160,3 +160,11 @@
 -   LIKE: Used to search for a value within a column, often with wildcard characters (% or \_).
 
 -   WHERE: Used to filter records based on a specified condition.
+
+## FORM & VALIDATION
+
+-   When you hit a Laravel application, Laravel automatically generates a unique token, and saves it in the user session.
+
+-   Whenever you need to make a request such as POST, PUT, PATCH, or DELETE in Laravel, you must generate and include a CSRF token with your request. Laravel validates this token by comparing the token provided in the request (e.g., through a form or header) with the token it has stored in the session on your browser. If both tokens match, Laravel considers the request valid and processes it.
+
+-   CSRF: This is for protection against malicious attacks.
