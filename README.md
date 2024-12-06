@@ -170,3 +170,5 @@
 -   CSRF: This is for protection against malicious attacks.
 
 -   When a form is submitted, Laravel by default automatically inject all of the data in the HTTP request.
+
+-   CUSTOM REQUEST CLASS: To create ====>> php artisan make:request contactStoreRequest .
