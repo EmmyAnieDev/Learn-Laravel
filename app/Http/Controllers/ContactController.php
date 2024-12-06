@@ -13,11 +13,7 @@ class ContactController extends Controller
     }
 
     function contactSubmit(contactStoreRequest $request)  // Using Dependency Injection to access the data in the request
-    {
-        $request->validate(
-           
-        );        
-
+    {       
         dd($request->all());
     }
 }
