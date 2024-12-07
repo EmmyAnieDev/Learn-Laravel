@@ -180,3 +180,7 @@
 -   Whenever we upload a file from our application by default Laravel store it in the Storage folder. we can also store it in the public folder.
 
 -   The image uploaded is saved to the local disk, which is not publicly accessible via URL. Only files stored in the public disk or within the public folder can be accessed via URL.
+
+-   Storage Link: This is a feature in Laravel that allows us to connect the storage/app/public directory to the public/storage directory via a symbolic link. This makes files stored in the public disk accessible via URLs. ====>> php artisan storage:link .
+
+-   http://127.0.0.1:8000/storage/aWCxIuAG6JaXQyYqsOs9dGdt1JB4KiOZID0BBU74.png To view the File via URL.
