@@ -176,3 +176,7 @@
 ## FILE STORAGE
 
 -   We can store file locally or in AWS s3
+
+-   Whenever we upload a file from our application by default Laravel store it in the Storage folder. we can also store it in the public folder.
+
+-   The image uploaded is saved to the local disk, which is not publicly accessible via URL. Only files stored in the public disk or within the public folder can be accessed via URL.
