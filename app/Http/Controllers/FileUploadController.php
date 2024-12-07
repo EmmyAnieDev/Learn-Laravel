@@ -19,10 +19,10 @@ class FileUploadController extends Controller
     function store(FileStoreRequest $request)
     {
         # save the uploaded file to the root directory of the local disk and returns the file path.
-        //$file = $request->file('file')->store('/', 'local');
+        $file = $request->file('file')->store('/', 'local');
 
         # To store publicly  ====>> storage/public.
-        $file = $request->file('file')->store('/', 'public');
+        //$file = $request->file('file')->store('/', 'public');
 
         $filestore = new FileUpload();
 
@@ -31,5 +31,10 @@ class FileUploadController extends Controller
         $filestore->save();
 
         dd('file saved in database!');
+    }
+
+    function download()
+    {
+        return Storage::disk('local')->download('gij1UjkhXZV1V39c3STFDJs3JIJ8KfAphLV3rQqJ.jpg');
     }
 }

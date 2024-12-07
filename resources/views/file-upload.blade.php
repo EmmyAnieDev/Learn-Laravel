@@ -24,11 +24,21 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-                        <table class="mt-3 mr-3">
+                        <table class="mt-3">
                             <tbody>
                                 @foreach ($files as $file)
                                     <td><img style="width:200px" src="/storage/{{ $file->file_path }}" alt=""</td>
                                 @endforeach
+                            </tbody>
+                        </table>
+                        <hr>
+                        <table class="mt-3">
+                            <tbody>
+                                {{-- @foreach ($files as $file) --}}
+                                    <td>
+                                        <a href="{{ route('file.download') }}">Download File</a>
+                                    </td>
+                                {{-- @endforeach --}}
                             </tbody>
                         </table>
                     </div>
