@@ -27,10 +27,19 @@
                         <table class="mt-3">
                             <tbody>
                                 @foreach ($files as $file)
-                                    <td><img style="width:200px" src="{{ asset($file->file_path) }}" alt=""</td>
+                                <tr>
+                                    <td><img style="width:200px" src="{{ asset($file->file_path) }}" alt=""></td>
+                                    <td>
+                                        <form action="{{ route('file.destroy', $file->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </table>                        
                         <hr>
                         <table class="mt-3">
                             <tbody>

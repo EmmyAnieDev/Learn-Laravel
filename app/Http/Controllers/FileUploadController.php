@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\FileStoreRequest;
 use App\Models\FileUpload;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File as HandleFile;
 use Illuminate\Support\Str;
 
 class FileUploadController extends Controller
@@ -40,5 +41,20 @@ class FileUploadController extends Controller
     {
         return Storage::disk('custom_public')->download($fileName);
     }
+
+    function destroy($id)
+    {
+        $file = FileUpload::findOrFail($id);
+        
+        // Delete file from storage
+        $filePath = str_replace('/uploads/', '', $file->file_path);
+        Storage::disk('custom_public')->delete($filePath);
+
+        // Delete from the database
+        $file->delete();
+
+        dd('file deleted succesfully!');
+    }
+
 
 }
