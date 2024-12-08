@@ -196,3 +196,21 @@
 -   When a file is uploaded, the database stores only the file path, while the actual uploaded images are stored either locally on the server or in a cloud storage service like AWS S3.
 
 -   The UI dynamically displays the uploaded files by retrieving their paths from the database and serving them either from the local "upload" directory or a cloud storage service like AWS S3.
+
+## HTTP REDIRECTS
+
+-   RESPONSE: Responses mean that from the application you return something to your user side.
+
+-   Redirect to the Previous URL (Go Back) =====>> return redirect()->back();
+
+-   Redirect to a Named Route ====>> return redirect()->route('home');.
+
+-   Redirect to a Controller Action =====>> return redirect()->action([SomeController::class, 'method']);
+
+-   Redirect to a Specific (Extenral) URL =====>> return redirect('http://example.com');
+
+-   Redirect with Custom Status Code ====>> return redirect()->route('home', [], 301);
+
+-   Redirect with Flash Data ====>> return redirect()->route('home')->with('status', 'Operation successful!');
+
+-   Redirect to a Route with Parameters =====>> return redirect()->route('profile.show', ['id' => $user->id]);
