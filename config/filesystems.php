@@ -45,6 +45,14 @@ return [
             'throw' => false,
         ],
 
+        'custom_public' => [
+            'driver' => 'local',
+            'root' => public_path('uploads'),     // store images in uploads directory
+            'url' => env('APP_URL').'/uploads',  // our appUrl/uploads/imgae_name
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

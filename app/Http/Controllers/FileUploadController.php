@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FileStoreRequest;
 use App\Models\FileUpload;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class FileUploadController extends Controller
 {
@@ -18,23 +18,27 @@ class FileUploadController extends Controller
 
     function store(FileStoreRequest $request)
     {
-        # save the uploaded file to the root directory of the local disk and returns the file path.
-        $file = $request->file('file')->store('/', 'local');
 
-        # To store publicly  ====>> storage/public.
-        //$file = $request->file('file')->store('/', 'public');
+        # Extract file extension
+        $file = $request->file('file');
+        $customName = 'laravel_'. Str::uuid();
+        $ext = $file->getClientOriginalExtension();
+        $fileName = "$customName.$ext";
+
+        $path = $file->storeAs('/', $fileName, 'custom_public');
 
         $filestore = new FileUpload();
 
-        $filestore->file_path = $file;
+        $filestore->file_path = "/uploads/$path";
 
         $filestore->save();
 
         dd('file saved in database!');
     }
 
-    function download()
+    function download($fileName)
     {
-        return Storage::disk('local')->download('gij1UjkhXZV1V39c3STFDJs3JIJ8KfAphLV3rQqJ.jpg');
+        return Storage::disk('custom_public')->download($fileName);
     }
+
 }

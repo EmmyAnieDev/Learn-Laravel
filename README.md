@@ -184,3 +184,15 @@
 -   Storage Link: This is a feature in Laravel that allows us to connect the storage/app/public directory to the public/storage directory via a symbolic link. This makes files stored in the public disk accessible via URLs. ====>> php artisan storage:link .
 
 -   http://127.0.0.1:8000/storage/aWCxIuAG6JaXQyYqsOs9dGdt1JB4KiOZID0BBU74.png To view the File via URL.
+
+-   Some shared hosting environments do not allow us to create the storage link because we can't run PHP Artisan commands using SSH on the server.
+
+-   Unlink previous Storage file. ====>> php artisan storage:unlink .
+
+-   Create a Custom Disk in the config/filesystems.php file.
+
+-   File names should be unique to prevent malicious users from guessing and manipulating files. This also ensures that previously saved files are not overwritten by new uploads with the same name.
+
+-   When a file is uploaded, the database stores only the file path, while the actual uploaded images are stored either locally on the server or in a cloud storage service like AWS S3.
+
+-   The UI dynamically displays the uploaded files by retrieving their paths from the database and serving them either from the local "upload" directory or a cloud storage service like AWS S3.
