@@ -224,3 +224,5 @@
 -   INNER JOIN: This is a type of join that returns only the rows that have matching values in both tables involved in the join.
 
 -   OUTTER JOIN (LEFT JOIN): This is a type of join that returns all rows from the left table and the matching rows from the right table.
+
+-   OUTTER JOIN (RIGHT JOIN): This is a type of join that returns all rows from the right table and the matching rows from the left table.
