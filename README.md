@@ -214,3 +214,9 @@
 -   Redirect with Flash Data ====>> return redirect()->route('home')->with('status', 'Operation successful!');
 
 -   Redirect to a Route with Parameters =====>> return redirect()->route('profile.show', ['id' => $user->id]);
+
+## JOINS
+
+-   A Foreign Key helps us relate or join two tables together.
+
+-   An example of a foreign key can be a user_id, which must exist in the users table in order to establish a relationship with a different table.
