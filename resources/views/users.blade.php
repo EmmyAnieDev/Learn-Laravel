@@ -12,19 +12,17 @@
         <div>
             @foreach ($users as $user)
                 <h4> {{ $user->name }} -- {{ $user->email }} </h4>
-                <p>Address: {{ $user->address->country }}, {{ $user->address->state }}, {{ $user->address->city }}. </p>
+                @foreach ( $user->addresses as $address )
+                    <p>Address: {{ $address->country }} --  {{ $address->state }} --  {{ $address->city }}. </p>
+                @endforeach
+                @foreach ( $user->fragrances as $fragrance )
+                    <p>Fragrance: {{ $fragrance->name }}. </p>
+                @endforeach
                 <hr>
             @endforeach
         </div>
         <br>
         <hr>
-        <div>
-            @foreach ($addresses as $address)
-                <h4> {{ $address->country }}, {{ $address->state }}, {{ $address->city }}. </h4>
-                <p>User: {{ $address->user->name }} -- {{ $address->user->email }} </p>
-                <hr>
-            @endforeach
-        </div>
     </tr>
     
 </body>

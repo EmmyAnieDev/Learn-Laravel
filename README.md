@@ -242,3 +242,7 @@
 -   hasOne(): Defines a one-to-one relationship where a model owns another model. For example, a User might have one Address.
 
 -   belongsTo(): Defines the inverse of the one-to-one relationship, where the model belongs to another model. For example, the Address belongs to a User.
+
+-   A One-to-Many Relationship is a database relationship where each record in one table is associated with more than one record in another table, and vice versa.
+
+-   hasMany(): Defines a one-to-many relationship where a model owns another model. For example, a User might have multiple Orders.

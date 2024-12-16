@@ -52,8 +52,21 @@ class User extends Authenticatable
         ];
     }
 
+    // when working with one to one relationship
     function address()
     {
         return $this->hasOne(Address::class);
+    }
+
+    // when working with one to many relationship
+    function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    // when working with one to many relationship
+    function fragrances()
+    {
+        return $this->hasMany(Fragrance::class);
     }
 }
