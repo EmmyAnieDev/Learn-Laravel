@@ -228,3 +228,11 @@
 -   OUTTER JOIN (RIGHT JOIN): This is a type of join that returns all rows from the right table and the matching rows from the left table.
 
 -   OUTTER JOIN (FULL JOIN): This is a type of join that returns all rows from both tables, matching rows where they exist in both tables.
+
+## ELOQUENT ORM RELATIONS
+
+-   In Laravel, ORM provides a way to define and manage relationships between models, allowing you to interact with database tables.
+
+-   Everything partaining to Relationships are done in the Model.
+
+-   A One-to-One Relationship is a database relationship where each record in one table is associated with exactly one record in another table, and vice versa.
