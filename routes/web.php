@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SingleActionController;
 use App\Http\Controllers\UserController;
+use App\Models\Address;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -28,5 +29,7 @@ Route::get('/users', function(){
 
     $users = User::all();
 
-    return view('users', compact('users'));
+    $addresses = Address::all();
+
+    return view('users', compact('users', 'addresses'));
 });

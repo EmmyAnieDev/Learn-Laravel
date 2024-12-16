@@ -236,3 +236,9 @@
 -   Everything partaining to Relationships are done in the Model.
 
 -   A One-to-One Relationship is a database relationship where each record in one table is associated with exactly one record in another table, and vice versa.
+
+-   In a One-to-One relationship, belongsTo() is the opposite of hasOne().
+
+-   hasOne(): Defines a one-to-one relationship where a model owns another model. For example, a User might have one Address.
+
+-   belongsTo(): Defines the inverse of the one-to-one relationship, where the model belongs to another model. For example, the Address belongs to a User.
