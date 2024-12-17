@@ -28,5 +28,6 @@ Route::get('/download/{fileName}', [FileUploadController::class, 'download'])->n
 Route::delete('/file-upload/{id}', [FileUploadController::class, 'destroy'])->name('file.destroy');
 
 Route::get('/users', [RelationController::class, 'users']);
-
 Route::get('/fragrance', [RelationController::class, 'fragrance']);
+Route::get('/cars', [RelationController::class, 'car']);
+Route::get('/many_relate', [RelationController::class, 'manyRelate']);

@@ -69,4 +69,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Fragrance::class);
     }
+
+    // when working with many to many relationship
+    function cars()
+    {
+        return $this->belongsToMany(Car::class);
+    }
 }

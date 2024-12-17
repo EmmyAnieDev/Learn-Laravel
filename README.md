@@ -246,3 +246,17 @@
 -   A One-to-Many Relationship is a database relationship where each record in one table is associated with more than one record in another table, and vice versa.
 
 -   hasMany(): Defines a one-to-many relationship where a model owns another model. For example, a User might have multiple Orders.
+
+-   A Many-to-Many relationship is a relationship between two entities where each instance of one entity can be related to multiple instances of the other entity, and vice-versa.
+
+-   In a Many-to-Many relationship, foreign keys are not directly stored in the entities themselves. Instead, a separate join table is used to link the two entities, and this table contains the foreign keys referencing both entities.
+
+-   To create a join table to relate two models in a Many-to-Many relationship, use the following command: ====>> php artisan make:migration create_car_user_table .
+
+*   _THE TABLE NAME MUST FOLLOW THESE CONVENTION:_
+
+-   Use singular forms of the related models' names (e.g., car and user).
+
+-   Arrange the model names in alphabetical order (e.g., car comes before user).
+
+-   Add the foreign IDs of both tables to the newly created join table..
