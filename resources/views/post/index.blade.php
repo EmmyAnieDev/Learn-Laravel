@@ -11,7 +11,7 @@
     <h2>Post Form</h2>
     <form action=" {{ route('post.store') }} " method="POST">
         @csrf
-        <input type="hidden" value="12" name="user_id"><br><br>
+        <input type="hidden" value="7" name="user_id"><br><br>
 
         <input type="text" id="age" name="title" placeholder="Title"><br><br>
 

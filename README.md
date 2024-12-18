@@ -300,3 +300,9 @@
 -   Next: A function that passes control to the next middleware in the stack, allowing the request to continue processing.
 
 -   We only add the Middleware to the route we want to protect. example in our "post"->/post route and not "get"->/post route.
+
+-   Route Group Middleware: We use the route group middleware when we want a particular group of routes to use the same middleware.
+
+-   Controller Middleware: When we add middleware to a controller, we must define a middleware() method to specify which middleware should be applied to the controller's actions.
+
+-   In controller middleware, we can use only() or except() to specify which actions the middleware should apply to.
