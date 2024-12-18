@@ -290,3 +290,11 @@
 -   This is particularly useful for authentication, authorization, logging, encryption, and other any kind of task that needed to be performed before processing the request.
 
 *   _Example Scenario: Preventing a user from accessing the Admin page. Blocking an unauthenticated user from performing a delete operation._
+
+-   To create a Middleware, run the command ====> php artisan make:middleware CheckRoleMiddleware .
+
+*   _The Request and Next parameteres in the Middleware's handle function are responsible for the below_
+
+-   Request: Represents the incoming HTTP request, providing access to data like query parameters, body, and headers.
+
+-   next: A function that passes control to the next middleware in the stack, allowing the request to continue processing.
