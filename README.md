@@ -260,3 +260,13 @@
 -   Arrange the model names in alphabetical order (e.g., car comes before user).
 
 -   Add the foreign IDs of both tables to the newly created join table..
+
+-   hasManyThrough relationship: This allows you to define a relationship where a model is related to another model through an intermediate model. It’s useful when you need to retrieve data that’s indirectly related.
+
+*   _Example Scenario: Consider a setup with Countries, States, and Cities_
+
+-   A Country has many States.
+
+-   A State has many Cities.
+
+-   Thus, a Country has many Cities through States.

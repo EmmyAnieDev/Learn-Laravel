@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SingleActionController;
@@ -27,7 +28,12 @@ Route::post('/file-upload', [FileUploadController::class, 'store'])->name('file.
 Route::get('/download/{fileName}', [FileUploadController::class, 'download'])->name('file.download');
 Route::delete('/file-upload/{id}', [FileUploadController::class, 'destroy'])->name('file.destroy');
 
+# One-to-One, One-to-Many, Many-to-Many Relationships.
+// hasOne() - belongsTo() -  hasMany() - belongsToMany()
 Route::get('/users', [RelationController::class, 'users']);
 Route::get('/fragrance', [RelationController::class, 'fragrance']);
 Route::get('/cars', [RelationController::class, 'car']);
 Route::get('/many_relate', [RelationController::class, 'manyRelate']);
+
+// hasMany Through relationship
+Route::get('/location_relate', [FullLocationController::class, 'locationRelate']);
