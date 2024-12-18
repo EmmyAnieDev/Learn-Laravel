@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
-class PostController extends Controller implements HasMiddleware
+class PostController extends Controller
 {
-    static function middleware()
-    {
-        return [new Middleware(CheckRoleMiddleware::class, only: ['store'])];
-    }
+    // static function middleware()
+    // {
+    //     return [new Middleware(CheckRoleMiddleware::class, only: ['store'])];
+    // }
 
     function index()
     {

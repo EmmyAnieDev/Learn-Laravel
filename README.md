@@ -306,3 +306,5 @@
 -   Controller Middleware: When we add middleware to a controller, we must define a middleware() method to specify which middleware should be applied to the controller's actions.
 
 -   In controller middleware, we can use only() or except() to specify which actions the middleware should apply to.
+
+-   Global Middleware: This middleware is applied to all incoming requests in the application, meaning every request will be filtered by this middleware. We can do this in the bootstrap/app.php file
