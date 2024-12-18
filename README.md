@@ -297,4 +297,6 @@
 
 -   Request: Represents the incoming HTTP request, providing access to data like query parameters, body, and headers.
 
--   next: A function that passes control to the next middleware in the stack, allowing the request to continue processing.
+-   Next: A function that passes control to the next middleware in the stack, allowing the request to continue processing.
+
+-   We only add the Middleware to the route we want to protect. example in our "post"->/post route and not "get"->/post route.

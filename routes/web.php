@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SingleActionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RelationController;
+use App\Http\Middleware\CheckRoleMiddleware;
 use App\Models\Address;
 use App\Models\Fragrance;
 use Illuminate\Support\Facades\DB;
@@ -45,4 +46,4 @@ Route::get('/image_relate', [PolymorphicController::class, 'imageRelate']);
 
 // MiddleWare
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
-Route::post('/post', [PostController::class, 'store'])->name('post.store');
+Route::post('/post', [PostController::class, 'store'])->name('post.store')->middleware(CheckRoleMiddleware::class);
