@@ -6,6 +6,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PolymorphicController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SingleActionController;
 use App\Http\Controllers\UserController;
@@ -41,3 +42,7 @@ Route::get('/location_relate', [FullLocationController::class, 'locationRelate']
 
 // morphOne() - morphTo() relationship
 Route::get('/image_relate', [PolymorphicController::class, 'imageRelate']);
+
+// MiddleWare
+Route::get('/post', [PostController::class, 'index'])->name('post.index');
+Route::post('/post', [PostController::class, 'store'])->name('post.store');

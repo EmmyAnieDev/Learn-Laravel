@@ -280,3 +280,13 @@
 *   _Example Sscenario: You have two models, User and Product, and you want to add images on both._
 
 -   Polymorphic relationships do not use foreign keys (foreignId()) in the same way as standard relationships because the related model is determined dynamically at runtime.
+
+## MIDDLEWARE
+
+-   Middleware in Laravel act as a gatekeeper for incoming HTTP request.
+
+-   Middleware allows you to inspect, modify or terminate requests before they reach the intended controller or route.
+
+-   This is particularly useful for authentication, authorization, logging, encryption, and other any kind of task that needed to be performed before processing the request.
+
+*   _Example Scenario: Preventing a user from accessing the Admin page. Blocking an unauthenticated user from performing a delete operation._
