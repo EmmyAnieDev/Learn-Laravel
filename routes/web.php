@@ -46,4 +46,4 @@ Route::get('/image_relate', [PolymorphicController::class, 'imageRelate']);
 
 // MiddleWare
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
-Route::post('/post', [PostController::class, 'store'])->name('post.store');
+Route::post('/post', [PostController::class, 'store'])->name('post.store')->middleware('checkRole');

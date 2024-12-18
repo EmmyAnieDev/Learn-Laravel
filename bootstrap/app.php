@@ -19,9 +19,13 @@ return Application::configure(basePath: dirname(__DIR__))
         //     DummyMiddleware::class
         // ]);
 
-        $middleware->appendToGroup('dummy-group', [
-            DummyMiddleware::class,
-            CheckRoleMiddleware::class
+        // $middleware->appendToGroup('dummy-group', [
+        //     DummyMiddleware::class,
+        //     CheckRoleMiddleware::class
+        // ]);
+
+        $middleware->alias([
+            'checkRole' => CheckRoleMiddleware::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
