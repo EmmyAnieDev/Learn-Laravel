@@ -270,3 +270,13 @@
 -   A State has many Cities.
 
 -   Thus, a Country has many Cities through States.
+
+-   Polymorphic relationship: This is where a model can belong to more than one other model on a single association.
+
+-   This is useful when multiple models (e.g., User and Product) can share the same relationship (e.g., Image).
+
+-   Instead of creating separate relationships for each model, you can use a polymorphic relationship to handle it more efficiently.
+
+*   _Example Sscenario: You have two models, User and Product, and you want to add images on both._
+
+-   Polymorphic relationships do not use foreign keys (foreignId()) in the same way as standard relationships because the related model is determined dynamically at runtime.

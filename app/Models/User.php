@@ -75,4 +75,11 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Car::class);
     }
+
+    // Defines a one-to-one polymorphic relationship with the Image model.
+    function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
 }
