@@ -308,3 +308,5 @@
 -   In controller middleware, we can use only() or except() to specify which actions the middleware should apply to.
 
 -   Global Middleware: This middleware is applied to all incoming requests in the application, meaning every request will be filtered by this middleware. We can do this in the bootstrap/app.php file
+
+-   Global Group Middleware: By default, global group middleware is not automatically loaded; we need to explicitly apply it to routes or controllers.
