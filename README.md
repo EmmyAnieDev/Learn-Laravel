@@ -320,3 +320,16 @@
 -   Adding a third parameter to the Middleware's handle function.
 
 *   _Example Scenario: /admin/dashboard?id=8_
+
+-   ## AUTHENTICATION
+
+-   Authentication is a process of verifying the identity of a user in your application.
+
+-   Installing Authentication Starter Kit ====>> composer require laravel/breeze --dev.
+
+-   After Composer has installed the Laravel Breeze package, you should run the breeze:install Artisan commands below.
+
+*   php artisan breeze:install
+*   php artisan migrate
+*   npm install
+*   npm run dev

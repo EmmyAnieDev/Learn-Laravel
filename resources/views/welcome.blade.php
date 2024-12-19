@@ -24,7 +24,7 @@
 @push('scripts')
   <script>
     $(document).ready(function() {
-      alert('This script is for Home page!')
+      alert('This script is for Dashboard page!')
     })
   </script>
 @endpush
