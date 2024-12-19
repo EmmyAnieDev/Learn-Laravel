@@ -310,3 +310,13 @@
 -   Global Middleware: This middleware is applied to all incoming requests in the application, meaning every request will be filtered by this middleware. We can do this in the bootstrap/app.php file
 
 -   Global Group Middleware: By default, global group middleware is not automatically loaded; we need to explicitly apply it to routes or controllers.
+
+-   Middleware Alias: This is a short, descriptive name or label assigned to a middleware class to make it easier to reference and apply in your application.
+
+-   Middleware parameters are additional arguments that you can pass to middleware when applying it to a route.
+
+-   These parameters can be used to customize the behavior of the middleware for specific routes or scenarios.
+
+-   Adding a third parameter to the Middleware's handle function.
+
+*   _Example Scenario: /admin/dashboard?id=8_

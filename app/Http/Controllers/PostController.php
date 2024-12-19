@@ -24,4 +24,14 @@ class PostController extends Controller
     {
         dd($request->all());
     }
+
+    function userDashboard()
+    {
+        dd('user dasboard');
+    }
+
+    function adminDashboard()
+    {
+        dd('admin dasboard');
+    }
 }
