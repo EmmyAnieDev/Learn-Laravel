@@ -333,3 +333,9 @@
 *   php artisan migrate
 *   npm install
 *   npm run dev
+
+-   ## AUTHORIZATION
+
+-   Authorization is a process of checking if an authenticated user has permission to access specific rosource or perform certain action in the application.
+
+-   Authrization comes after the Authentication.
