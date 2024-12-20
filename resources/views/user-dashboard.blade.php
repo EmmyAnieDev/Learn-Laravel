@@ -13,5 +13,10 @@
         <p>Name: {{ Auth::user()->name }}</p>
         <p>Email: {{ auth()->user()->email }}</p>
     @endauth
+
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button>LOGOUT</button>
+    </form>
 </body>
 </html>
