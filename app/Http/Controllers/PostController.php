@@ -6,6 +6,7 @@ use App\Http\Middleware\CheckRoleMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -27,7 +28,16 @@ class PostController extends Controller
 
     function userDashboard()
     {
-        dd('user dasboard');
+        // $user = Auth::user();   // Retrieve the current Authenticated (logged in) user properties.
+
+        // if (!Auth::check()){
+        //     abort(401);
+        // }
+
+        // dd($user);
+
+        return view('user-dashboard');
+
     }
 
     function adminDashboard()
