@@ -47,7 +47,7 @@ Route::get('/post', [PostController::class, 'index'])->name('post.index');
 Route::post('/post', [PostController::class, 'store'])->name('post.store')->middleware('checkRole');
 
 // MiddleWare Parameters
-Route::get('/user/dashboard', [PostController::class, 'userDashboard'])->name('user.dashboard');
+Route::get('/user/dashboard', [PostController::class, 'userDashboard'])->middleware('auth')->name('user.dashboard');
 Route::get('/admin/dashboard', [PostController::class, 'adminDashboard'])->middleware('checkRole:admin');
 
 //  AUTH Middleware
