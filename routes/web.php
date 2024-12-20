@@ -42,19 +42,13 @@ Route::get('/location_relate', [FullLocationController::class, 'locationRelate']
 // morphOne() - morphTo() relationship
 Route::get('/image_relate', [PolymorphicController::class, 'imageRelate']);
 
-// MiddleWare
-Route::get('/post', [PostController::class, 'index'])->name('post.index');
-Route::post('/post', [PostController::class, 'store'])->name('post.store')->middleware('checkRole');
-
-// MiddleWare Parameters
-Route::get('/user/dashboard', [PostController::class, 'userDashboard'])->middleware('auth')->name('user.dashboard');
-Route::get('/admin/dashboard', [PostController::class, 'adminDashboard'])->middleware('checkRole:admin');
-
 //  AUTH Middleware
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::resource('post', PostController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';

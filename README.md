@@ -339,3 +339,9 @@
 -   Authorization is a process of checking if an authenticated user has permission to access specific rosource or perform certain action in the application.
 
 -   Authrization comes after the Authentication.
+
+-   _GATE_
+
+-   Gate is a mechanism for defining authorization logic in closure based approach.
+
+-   Gates provides a simple way to determine if a user is authorized to perform a given task.

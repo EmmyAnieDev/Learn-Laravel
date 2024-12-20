@@ -2,46 +2,90 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Middleware\CheckRoleMiddleware;
+use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controllers\HasMiddleware;
-use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class PostController extends Controller
 {
-    // static function middleware()
-    // {
-    //     return [new Middleware(CheckRoleMiddleware::class, only: ['store'])];
-    // }
-
-    function index()
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        return view('post.index');
+        // $posts = Post::all();
+
+        // Fetching just post that belongs to the Authenticated User.
+        $posts = Post::where('user_id', Auth::user()->id)->get();
+
+        return view('post.index', compact('posts'));
     }
 
-
-    function store(Request $request)
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        dd($request->all());
+        //
     }
 
-    function userDashboard()
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
-        // $user = Auth::user();   // Retrieve the current Authenticated (logged in) user properties.
+        //
+    }
 
-        // if (!Auth::check()){
-        //     abort(401);
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $post = Post::findOrFail($id);
+
+        #  Normal to check if user is allowed to perform this action / access the resource
+        // if (Auth::user()->id != $post->user_id)
+        // {
+        //     abort(403);
         // }
 
-        // dd($user);
+        # Using GATE
 
-        return view('user-dashboard');
+        // // Passing the post object to the Gate facade to check permissions
+        // if (!Gate::allows('update-post', $post)) {
+        //     abort(403);
+        // };
+
+        // Second method using Gate
+        Gate::authorize('update-post', $post);
+
+        return view('post.edit', compact('post'));
 
     }
 
-    function adminDashboard()
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
     {
-        dd('admin dasboard');
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
