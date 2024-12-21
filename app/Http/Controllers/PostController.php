@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        // $posts = Post::all();
+        //$posts = Post::all();
 
         // Fetching just post that belongs to the Authenticated User.
         $posts = Post::where('user_id', Auth::user()->id)->get();
@@ -66,8 +66,11 @@ class PostController extends Controller
         //     abort(403);
         // };
 
-        // Second method using Gate
-        Gate::authorize('update-post', $post);
+        // // Second method using Gate
+        //Gate::authorize('update-post', $post);
+
+        // When using Policy we use the policy method's name as first parameter.
+        Gate::authorize('update', $post);
 
         return view('post.edit', compact('post'));
 

@@ -345,3 +345,9 @@
 -   Gate is a mechanism for defining authorization logic in closure based approach.
 
 -   Gates provides a simple way to determine if a user is authorized to perform a given task.
+
+-   _POLICY_
+
+-   While Gates are created to handle specific actions in our application, Policies are associated with a specific Model to define authorization logic for various actions on that Model.
+
+-   To create a Policy, run this command. ====>> php artisan make:policy PostPolicy --model=Post.
