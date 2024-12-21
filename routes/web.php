@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HttpResponseController;
 use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
@@ -50,5 +51,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('post', PostController::class)->middleware('auth');
+
+Route::get('/response', [HttpResponseController::class, 'index'])->name('response.index');
+Route::get('/response/create', [HttpResponseController::class, 'create'])->name('response.create');
+Route::get('/response/show', [HttpResponseController::class, 'show'])->name('response.show');
 
 require __DIR__.'/auth.php';
