@@ -40,4 +40,21 @@ class HttpResponseController extends Controller
     function show(){
         dd('I was called from Index method.');
     }
+
+    function others (){
+       
+        // Returning a JSON response with country, state, and city information
+        return response()->json([
+            'Country' => 'United States',
+            'State' => 'California',
+            'City' => 'Los Angeles'
+        ]);
+
+        // Returning a file download response for the specified file
+        return response()->download(public_path('uploads/task_ui.png'));
+
+        // Returning a file response to display the specified file in the browser
+        return response()->file(public_path('uploads/task_ui.png'));
+
+    }
 }

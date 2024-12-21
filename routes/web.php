@@ -55,5 +55,6 @@ Route::resource('post', PostController::class)->middleware('auth');
 Route::get('/response', [HttpResponseController::class, 'index'])->name('response.index');
 Route::get('/response/create', [HttpResponseController::class, 'create'])->name('response.create');
 Route::get('/response/show', [HttpResponseController::class, 'show'])->name('response.show');
+Route::get('/response/others', [HttpResponseController::class, 'others'])->name('response.others');
 
 require __DIR__.'/auth.php';

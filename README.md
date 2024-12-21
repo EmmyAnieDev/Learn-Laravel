@@ -351,3 +351,7 @@
 -   While Gates are created to handle specific actions in our application, Policies are associated with a specific Model to define authorization logic for various actions on that Model.
 
 -   To create a Policy, run this command. ====>> php artisan make:policy PostPolicy --model=Post.
+
+## HTTP RESPONSES
+
+-   Laravel automatically converts the response to JSON if the return value is an array or a collection
