@@ -14,10 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //$posts = Post::all();
+        $posts = Post::all();
 
         // Fetching just post that belongs to the Authenticated User.
-        $posts = Post::where('user_id', Auth::user()->id)->get();
+        // $posts = Post::where('user_id', Auth::user()->id)->get();
 
         return view('post.index', compact('posts'));
     }
