@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
@@ -57,4 +58,7 @@ Route::get('/response/create', [HttpResponseController::class, 'create'])->name(
 Route::get('/response/show', [HttpResponseController::class, 'show'])->name('response.show');
 Route::get('/response/others', [HttpResponseController::class, 'others'])->name('response.others');
 
+// MAIL
+Route::get('/send-mail', [EmailController::class, 'index'])->name('mail.index');
+Route::post('/send-mail', [EmailController::class, 'send'])->name('mail.send');
 require __DIR__.'/auth.php';
