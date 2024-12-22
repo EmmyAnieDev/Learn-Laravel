@@ -7,15 +7,22 @@
     <title>Component</title>
 </head>
 <body>
-    Component Test Page
+Component Test Page
 
-    <x-alert style="color: #2563eb" text="This is a test data!"/>
+    {{--    <x-alert style="color: #2563eb" text="This is a test data!"/>--}}
 
-    <x-from.input />
+    {{--    <x-from.input />--}}
 
-    <x-from.form-select />
+    {{--    <x-from.form-select />--}}
 
-    <x-alert style="color: red; border: 1px solid green" text="This is test data 2!"/>
+    {{--    <x-alert style="color: red; border: 1px solid green" text="This is test data 2!"/>--}}
 
+    @php
+        $languages = ['PHP', 'Python', 'Java', 'C#', 'Dart', 'Javascript', 'Go', 'Rust']
+    @endphp
+
+    @foreach($languages as $language)
+        <x-alert :text="$language"/>
+    @endforeach
 </body>
 </html>

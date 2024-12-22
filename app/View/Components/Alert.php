@@ -9,13 +9,14 @@ use Illuminate\View\Component;
 class Alert extends Component
 {
 
-    public string $text;
-    public string $style;
+    public  $text;
+    public  $style;
 
     /**
      * Create a new component instance.
+     * Property can be null
      */
-    public function __construct($text, $style)
+    public function __construct($text = null, $style = null)
     {
         $this->text = $text;
         $this->style = $style;
