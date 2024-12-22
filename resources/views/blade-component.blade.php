@@ -17,12 +17,16 @@ Component Test Page
 
     {{--    <x-alert style="color: red; border: 1px solid green" text="This is test data 2!"/>--}}
 
-    @php
-        $languages = ['PHP', 'Python', 'Java', 'C#', 'Dart', 'Javascript', 'Go', 'Rust']
-    @endphp
+    {{--    @php--}}
+    {{--        $languages = ['PHP', 'Python', 'Java', 'C#', 'Dart', 'Javascript', 'Go', 'Rust']--}}
+    {{--    @endphp--}}
 
-    @foreach($languages as $language)
-        <x-alert :text="$language"/>
-    @endforeach
+    {{--    @foreach($languages as $language)--}}
+    {{--        <x-alert :text="$language"/>--}}
+    {{--    @endforeach--}}
+
+    <br>
+    <x-button style="background: red; padding: 10px; color: white"/>
+<x-button style="background: blue; padding: 10px; color: white"/>
 </body>
 </html>
