@@ -359,3 +359,9 @@
 ## MAIL
 
 -   To send an email with an HTML template, the first step is to create a Mailable class by running the command: ====>> php artisan make:mail SendMail .
+
+*   _When attaching files to your email:_
+
+-   Use fromPath() if the file is located in the public/uploads folder.
+
+-   Use fromStorage() if the file is stored in the storage/app folder.
