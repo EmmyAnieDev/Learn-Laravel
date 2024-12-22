@@ -355,3 +355,7 @@
 ## HTTP RESPONSES
 
 -   Laravel automatically converts the response to JSON if the return value is an array or a collection
+
+## MAIL
+
+-   To send an email with an HTML template, the first step is to create a Mailable class by running the command: ====>> php artisan make:mail SendMail .
