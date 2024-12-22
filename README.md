@@ -369,3 +369,15 @@
 -   QUEUING EMAILS: Laravel Queuing lets you handle time-consuming tasks, like sending emails or uploads, in the background. This boosts your app's performance and responsiveness.
 
 -   To start the queue worker, run the following command: ====>>  php artisan queue:work
+
+##  BLADE COMPONENTS
+
+-   Blade components in Laravel are reusable, customizable pieces of UI that can be included in different views, making your code cleaner and more maintainable. Components allow you to encapsulate complex HTML, logic, and styling, and reuse them across your application.
+
+-   To create a blade components, run this command: ====>> php artisan make:component Alert
+
+-   To create a blade components inside nested folder, run this command: ====>> php artisan make:component From/Input
+
+-   To create a inline blade components, run this command: ====>> php artisan make:component From/Link --inline (This type of component don't have View, they only have Class. code your view inside the class).
+
+-   To create an Anonymous blade components, run this command: ====>> php artisan make:component from.button --view (This type of component don't have Class, they only have View.)
