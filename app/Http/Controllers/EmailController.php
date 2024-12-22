@@ -18,7 +18,10 @@ class EmailController extends Controller
         //  });
 
         # Sending an email using the SendMail Mailable class
-        Mail::to($request->email)->send(new SendMail($request->message));
+        // Mail::to($request->email)->send(new SendMail($request->message));
+
+        # Sends the email using the queue system, improving app performance by processing it asynchronously.
+        Mail::to($request->email)->queue(new SendMail($request->message));
 
 
         dd('Message has been sent to ' . $request->email);

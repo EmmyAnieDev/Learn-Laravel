@@ -365,3 +365,7 @@
 -   Use fromPath() if the file is located in the public/uploads folder.
 
 -   Use fromStorage() if the file is stored in the storage/app folder.
+
+-   QUEUING EMAILS: Laravel Queuing lets you handle time-consuming tasks, like sending emails or uploads, in the background. This boosts your app's performance and responsiveness.
+
+-   To start the queue worker, run the following command: ====>>  php artisan queue:work
