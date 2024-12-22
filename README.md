@@ -386,3 +386,4 @@
 
 -   To pass data to a component, first create a property in the component's class.
 
+-   SLOTS: This is exactly like the @yeild() directive in blade.

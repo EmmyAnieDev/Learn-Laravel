@@ -26,7 +26,10 @@ Component Test Page
     {{--    @endforeach--}}
 
     <br>
-    <x-button style="background: red; padding: 10px; color: white"/>
-<x-button style="background: blue; padding: 10px; color: white"/>
+    {{--    <x-button style="background: red; padding: 10px; color: white"/>--}}
+    {{--    <x-button style="background: blue; padding: 10px; color: white"/>--}}
+
+    <x-button style="background: red; padding: 10px; color: white"> Click Me </x-button>
+    <x-button style="background: blue; padding: 10px; color: white"> Go back </x-button>
 </body>
 </html>
