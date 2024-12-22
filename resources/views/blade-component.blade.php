@@ -9,11 +9,13 @@
 <body>
     Component Test Page
 
-    <x-alert />
+    <x-alert style="color: #2563eb" text="This is a test data!"/>
 
     <x-from.input />
 
     <x-from.form-select />
+
+    <x-alert style="color: red; border: 1px solid green" text="This is test data 2!"/>
 
 </body>
 </html>

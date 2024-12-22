@@ -383,3 +383,6 @@
 -   To create an Anonymous blade components, run this command: ====>> php artisan make:component from.button --view (This type of component don't have Class, they only have View.)
 
 -   To create an two words blade components, run this command: ====>> php artisan make:component From/FormSelect
+
+-   To pass data to a component, first create a property in the component's class.
+
