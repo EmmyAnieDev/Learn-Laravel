@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BladeComponentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FileUploadController;
@@ -61,4 +62,7 @@ Route::get('/response/others', [HttpResponseController::class, 'others'])->name(
 // MAIL
 Route::get('/send-mail', [EmailController::class, 'index'])->name('mail.index');
 Route::post('/send-mail', [EmailController::class, 'send'])->name('mail.send');
+
+// BLADE COMPONENTS
+Route::get('/components', [BladeComponentController::class, 'index'])->name('component.index');
 require __DIR__.'/auth.php';

@@ -381,3 +381,5 @@
 -   To create a inline blade components, run this command: ====>> php artisan make:component From/Link --inline (This type of component don't have View, they only have Class. code your view inside the class).
 
 -   To create an Anonymous blade components, run this command: ====>> php artisan make:component from.button --view (This type of component don't have Class, they only have View.)
+
+-   To create an two words blade components, run this command: ====>> php artisan make:component From/FormSelect
