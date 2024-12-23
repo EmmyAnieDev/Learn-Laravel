@@ -368,9 +368,9 @@
 
 -   QUEUING EMAILS: Laravel Queuing lets you handle time-consuming tasks, like sending emails or uploads, in the background. This boosts your app's performance and responsiveness.
 
--   To start the queue worker, run the following command: ====>>  php artisan queue:work
+-   To start the queue worker, run the following command: ====>> php artisan queue:work
 
-##  BLADE COMPONENTS
+## BLADE COMPONENTS
 
 -   Blade components in Laravel are reusable, customizable pieces of UI that can be included in different views, making your code cleaner and more maintainable. Components allow you to encapsulate complex HTML, logic, and styling, and reuse them across your application.
 
@@ -387,3 +387,11 @@
 -   To pass data to a component, first create a property in the component's class.
 
 -   SLOTS: This is exactly like the @yeild() directive in blade.
+
+## SESSIONS
+
+-   Sessions provide a way to store information about a user across multiple requests. This is essential because HTTP-driven applications are stateless.
+
+-   To start using sessions and storing session data, install the required package by running the command below:
+
+-   composer require barryvdh/laravel-debugbar --dev

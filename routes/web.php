@@ -12,6 +12,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -65,4 +66,7 @@ Route::post('/send-mail', [EmailController::class, 'send'])->name('mail.send');
 
 // BLADE COMPONENTS
 Route::get('/components', [BladeComponentController::class, 'index'])->name('component.index');
+
+// BLADE COMPONENTS
+Route::get('/sessions', [SessionController::class, 'index']);
 require __DIR__.'/auth.php';
