@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BladeComponentController;
+use App\Http\Controllers\CacheController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FileUploadController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\RelationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SessionController;
+use Barryvdh\Debugbar\DataCollector\CacheCollector;
 
 Route::get('/', function () {
     return view('welcome');
@@ -67,6 +69,9 @@ Route::post('/send-mail', [EmailController::class, 'send'])->name('mail.send');
 // BLADE COMPONENTS
 Route::get('/components', [BladeComponentController::class, 'index'])->name('component.index');
 
-// BLADE COMPONENTS
+// SESSION CONTROLLER
 Route::get('/sessions', [SessionController::class, 'index']);
+
+// CACHE CONTROLLER
+Route::get('/cache', [CacheController::class, 'index']);
 require __DIR__.'/auth.php';
