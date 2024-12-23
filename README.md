@@ -395,3 +395,15 @@
 -   To start using sessions and storing session data, install the required package by running the command below:
 
 -   composer require barryvdh/laravel-debugbar --dev
+
+## CACHING
+
+-   Caching is a technique used to store frequently accessed data in a temporary storage area (called a cache) to reduce the time it takes to retrieve the data.
+
+-   By keeping copies of data in the cache, systems can avoid expensive operations like database queries or computations, thereby improving application performance and responsiveness.
+
+-   _Differences Between Session and Cache_
+
+*   Session is user-specific storage that persists data for a single user across their browsing session. It is typically used to store temporary user-related data, such as authentication information.
+
+*   Cache is a global storage mechanism that stores frequently accessed data, often from the database, to reduce load times and improve performance. It is not user-specific and is shared across all users.
