@@ -22,7 +22,7 @@ class SessionController extends Controller
 
         #------------   GETTING SESSION DATA   ---------------#
 
-        // Retrieves the value of the 'name' key from the session using the request instance.
+        //Retrieves the value of the 'name' key from the session using the request instance.
         $value = $request->session()->get('name');
 
         // Retrieves the value of the 'Experience' key from the session using the global `session()` helper.
@@ -34,8 +34,26 @@ class SessionController extends Controller
         // Retrieves the value of the 'role' key from the session using the `Session` facade.
         $value = Session::get('role');
 
-        dd($value);
+        //dd($value);
 
-        //return view ('session');
+
+        #------------   DELETING SESSION DATA   ---------------#
+
+        // Removes the session key 'name' and its associated value from the session using the request instance
+        $request->session()->forget('name');
+
+        // Removes the session key 'Experience' and its associated value from the session.
+        session()->forget('Experience');
+
+        // Removes multiple session keys ('Experience' and 'name') and their associated values from the session.
+        session()->forget(['Experience', 'name']);
+
+        //Removes **all session data**, effectively clearing the entire session store for the user using Facade.
+        session::flush();
+
+        // Removes **all session data**, effectively clearing the entire session store for the user.
+        session()->flush();
+
+        return view ('session');
     }
 }

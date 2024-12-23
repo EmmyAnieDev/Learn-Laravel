@@ -9,9 +9,9 @@
 <body>
     <h1>Session Page</h1>
     <h4>{{ session('name') }}</h4>
-    @foreach (session('language') as $lang)
+    {{-- @foreach (session('language') as $lang)
         <h4>{{ $lang }}</h4>
-    @endforeach
+    @endforeach --}}
     <h4>{{ session('Experience') }}</h4>
     <h4>{{ session('role') }}</h4>
 </body>
