@@ -26,6 +26,18 @@ class CacheController extends Controller
             return User::all();
         });
 
+        # Retrieves and removes the 'users' key from the cache in a single operation.
+        $users = Cache::pull('users');
+
+        # To remove the Cache data.
+        $users = null;
+
+        $users = Cache::forget('users');
+
+        if (Cache::has('users')) {
+            dd('data is in cache');
+        }
+
         return view('cache', compact('users'));
     }
 }

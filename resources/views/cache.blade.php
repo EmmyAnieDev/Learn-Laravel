@@ -7,7 +7,7 @@
     <title>Cached Users</title>
 </head>
 <body>
-    @foreach ($users as $user)
+    @foreach ($users ?? [] as $user)
         <p>{{ $user->name }} -- {{ $user->email }}</p>
     @endforeach
 </body>

@@ -409,3 +409,5 @@
 *   Cache is a global storage mechanism that stores frequently accessed data, often from the database, to reduce load times and improve performance. It is not user-specific and is shared across all users.
 
 -   Caching database responses works on the first request, and subsequent requests fetch data from the cache until it expires or is manually cleared.
+
+-   Using File Driver for Cachinng is faster than using Database Driver.
