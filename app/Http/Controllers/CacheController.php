@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -16,5 +17,15 @@ class CacheController extends Controller
         $value = Cache::get('post_1');
 
         dd($value);
+
+        # Fetching Data without Caching it.
+        $users = User::all();
+
+        // Caches all users indefinitely, retrieving from the database only if the cache is empty.
+        $users = Cache::rememberForever('users', function () {
+            return User::all();
+        });
+
+        return view('cache', compact('users'));
     }
 }

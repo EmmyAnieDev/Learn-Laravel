@@ -407,3 +407,5 @@
 *   Session is user-specific storage that persists data for a single user across their browsing session. It is typically used to store temporary user-related data, such as authentication information.
 
 *   Cache is a global storage mechanism that stores frequently accessed data, often from the database, to reduce load times and improve performance. It is not user-specific and is shared across all users.
+
+-   Caching database responses works on the first request, and subsequent requests fetch data from the cache until it expires or is manually cleared.
