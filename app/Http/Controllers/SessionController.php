@@ -19,6 +19,23 @@ class SessionController extends Controller
         # Stroing via the Facade...
         Session::put('role', 'Junior Engineer');
 
-        return view ('session');
+
+        #------------   GETTING SESSION DATA   ---------------#
+
+        // Retrieves the value of the 'name' key from the session using the request instance.
+        $value = $request->session()->get('name');
+
+        // Retrieves the value of the 'Experience' key from the session using the global `session()` helper.
+        $value = session()->get('Experience');
+
+        // Another way to retrieve the value of the 'languages' key from the session using the global `session()` helper.
+        $value = session('languages');
+
+        // Retrieves the value of the 'role' key from the session using the `Session` facade.
+        $value = Session::get('role');
+
+        dd($value);
+
+        //return view ('session');
     }
 }
